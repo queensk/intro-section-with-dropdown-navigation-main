@@ -1,0 +1,53 @@
+header {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  padding: 0 70px; */
+}
+.hero-main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  padding: 0 70px;
+}
+header div {
+  padding: 30px;
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+.hero-content {
+  /* padding: 10px; */
+}
+header div p {
+  width: 60%;
+  padding: 8% 0;
+}
+header div.hero-img img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+}
+
+.hero-tittle {
+  font-size: 60px;
+}
+header div button {
+  padding: 10px 20px;
+  border-radius: 17px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.clients{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100px;
+}
+.clients img{
+    width: 60px;
+}

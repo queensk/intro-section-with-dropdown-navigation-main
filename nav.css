@@ -1,0 +1,88 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+nav .logo {
+  font-size: 22px;
+  font-weight: 1000;
+  padding: 0 10px;
+}
+nav .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .nav-bar span {
+  padding: 0 30px;
+}
+nav .nav-bar span:hover {
+  color: #ddd;
+  transition: all ease-in-out 0.3s;
+}
+nav .login {
+  align-self: flex-end;
+}
+nav .login button {
+  background-color: #fafafa;
+  border: 2px solid #fafafa;
+  border-radius: 9px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+nav .login a {
+  cursor: pointer;
+}
+nav .login button:hover {
+  border: 2px solid gray;
+}
+/* dorpdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown span {
+  cursor: pointer;
+}
+.nav-dropdown span{
+
+}
+
+.nav-dropdown ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin: 10px;
+  list-style: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+.nav-dropdown li {
+  padding: 8px 46px;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  width: 50%;
+}
+
+.nav-dropdown li:hover,
+.nav-dropdown ul:hover,
+.nav-dropdown ul:active {
+  background-color: #ddd;
+  display: block;
+}
+
+.nav-dropdown:hover ul {
+  display: block;
+  font-size: 16px;
+}
+
