@@ -2,24 +2,35 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2%;
+  padding: 1%;
 }
+
 nav .logo {
-  font-size: 22px;
-  font-weight: 1000;
-  padding: 0 10px;
-}
-nav .nav-bar {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.nav-items-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav-bar {
+  display: flex;
+  justify-content: center;
+}
+
 nav .nav-bar span {
   padding: 0 30px;
+  cursor: pointer;
 }
+
 nav .nav-bar span:hover {
   color: #ddd;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.2s;
 }
 nav .login {
   align-self: flex-end;
@@ -30,11 +41,12 @@ nav .login button {
   border-radius: 9px;
   padding: 8px 15px;
   cursor: pointer;
+  margin: 7px;
 }
 nav .login a {
   cursor: pointer;
 }
-nav .login button:hover {
+nav .login button {
   border: 2px solid gray;
 }
 /* dorpdown */
@@ -45,8 +57,9 @@ nav .login button:hover {
 .nav-dropdown span {
   cursor: pointer;
 }
-.nav-dropdown span{
 
+.nav-dropdown span img {
+  padding: 0 0 0 3px;
 }
 
 .nav-dropdown ul {
@@ -57,10 +70,9 @@ nav .login button:hover {
   padding: 0;
   margin: 10px;
   list-style: none;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
 }
 
 .nav-dropdown li {
@@ -73,11 +85,24 @@ nav .login button:hover {
   font-size: 16px;
   width: 50%;
 }
-
-.nav-dropdown li:hover,
-.nav-dropdown ul:hover,
-.nav-dropdown ul:active {
+.nav-dropdown:hover .nav-dropdown-items {
+  display: block;
+}
+.nav-dropdown-items {
+  border-radius: 10px;
+}
+/* .nav-dropdown-items li span:hover {
+  background-color: #e0e0e0;
+} */
+.nav-dropdown-items li.active {
+  background-color: #e0e0e0;
+}
+/* .nav-dropdown li:hover {
   background-color: #ddd;
+  cursor: pointer;
+} */
+nav .nav-bar span:hover ul,
+nav .nav-bar span:focus ul {
   display: block;
 }
 
@@ -86,3 +111,63 @@ nav .login button:hover {
   font-size: 16px;
 }
 
+.menu-icon {
+  display: none;
+}
+
+/* Mobile-specific styles for 375px */
+@media (max-width: 767px) {
+  .logo {
+    order: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-items-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: white;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav-items-container.active .nav-dropdown-items {
+    display: block;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .nav-dropdown {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .nav-dropdown-items {
+    position: static;
+    display: block;
+    padding: 0;
+  }
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 991px) {
+  }
+}

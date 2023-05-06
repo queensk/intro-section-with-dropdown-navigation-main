@@ -7,6 +7,7 @@ header {
   height: 500px;
   padding: 0 70px;
 }
+
 header div {
   padding: 30px;
   flex-grow: 1;
@@ -15,10 +16,12 @@ header div {
 .hero-content {
   /* padding: 10px; */
 }
+
 header div p {
-  width: 60%;
-  padding: 8% 0;
+  width: 80%;
+  padding: 7% 0;
 }
+
 header div.hero-img img {
   display: flex;
   align-items: center;
@@ -26,26 +29,86 @@ header div.hero-img img {
   height: 400px;
   width: 400px;
 }
-
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+}
 .hero-tittle {
   font-size: 60px;
 }
+
 header div button {
   padding: 15px 25px;
+  margin: 6% 0;
   border-radius: 17px;
   letter-spacing: 2px;
   cursor: pointer;
   border: 1px solid black;
   background-color: black;
   color: #fff;
+  font-weight: 700;
+  transition: all ease-in-out 0.3s;
 }
 
-.clients{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 100px;
+header div button:hover {
+  background-color: #fff;
+  color: black;
 }
-.clients img{
-    width: 60px;
+header .hero-content div {
+  padding: 0;
+  margin: 0;
+}
+.clients {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100px;
+}
+
+.clients img {
+  width: 60px;
+}
+@media (max-width: 767px) {
+  .hero-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-content {
+    order: 2;
+  }
+  .hero-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .clients {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  header div {
+    padding: 2%;
+  }
+  .hero-content h1 {
+    display: inline-block;
+    font-size: 40px;
+    margin: 0;
+  }
+  .hero-content p {
+    width: 70%;
+    text-align: center;
+    padding: 2%;
+  }
 }
